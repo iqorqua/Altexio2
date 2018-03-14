@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "1043157831411",
+    "firebase_url": "https://mychat-9deba.firebaseio.com",
+    "project_id": "mychat-9deba",
+    "storage_bucket": "mychat-9deba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043157831411:android:ba9e5cde1ea4337d",
+        "android_client_info": {
+          "package_name": "com.app.altex.altexio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043157831411-j4a2ds0hhjbuo8ig0opk3brgsg5b2d8n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.altex.altexio",
+            "certificate_hash": "60c3a9573e7a9a41d69236ee1509ef6d5051e9aa"
+          }
+        },
+        {
+          "client_id": "1043157831411-dj68mdtpbsfq1hkkqd5rsjkga72k03d3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkAmdPgyBRXWgeYxcMWUm-bZ4QweJLVOQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043157831411-dj68mdtpbsfq1hkkqd5rsjkga72k03d3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1043157831411-gg2g5h3anmpb0r2ao82vs99p0kr42rg5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "MadeInHeaven.Alttex-messager"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

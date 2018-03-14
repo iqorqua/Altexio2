@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_conversation"
+        android:icon="@drawable/contact"
+        android:title="@string/conversations" />
+
+    <item
+        android:id="@+id/navigation_wallets"
+        android:icon="@drawable/wallet"
+        android:title="@string/title_activity_wallets" />
+
+    <!--item
+        android:id="@+id/navigation_entertainment"
+        android:icon="@drawable/entertaiments"
+        android:title="@string/entertainment"
+        android:visible="false"/-->
+
+    <item
+        android:id="@+id/navigation_cryptoshop"
+        android:icon="@drawable/cryptoshop"
+        android:title="@string/cryptoshop" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/settings"
+        android:title="@string/settings" />
+
+</menu>

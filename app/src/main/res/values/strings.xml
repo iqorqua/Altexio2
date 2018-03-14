@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Altex.io</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_wallets">Wallets</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wallets">Wallets</string>
+    <string name="recange">Rechange</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="cryptoshop">Cryptoshop</string>
+    <string name="settings">Settings</string>
+    <string name="conversations">Conversations</string>
+    <string name="api_key_google_places">AIzaSyBisbsq9wIW8Q2Isj033c3wXqtTBRyaRBA</string>
+    <string name="search">Search</string>
+</resources>

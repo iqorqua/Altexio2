@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.app.altex.altexio.thirdpatryactivity.ViewPropertyFavoriteCoin">
+
+    <TextView
+        android:id="@+id/vievCoin_txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="TextView"
+        android:textColor="@color/place_autocomplete_search_hint"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/sdfsdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Supply Used:"
+                    android:textColor="@color/place_autocomplete_search_hint"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+
+                <TextView
+                    android:id="@+id/sfdsfs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="80,.9%"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/sfdsfsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Percent Change(1h):"
+                    android:textColor="@color/place_autocomplete_search_hint"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+
+                <TextView
+                    android:id="@+id/sdgfdggfh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="-0.01%"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/sdfsgre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Percent Change(24h):"
+                    android:textColor="@color/place_autocomplete_search_hint"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+
+                <TextView
+                    android:id="@+id/fdhgfh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="-4.63%"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/dghfgh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:text="Percent Change(7d):"
+                    android:textColor="@color/place_autocomplete_search_hint"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+
+                <TextView
+                    android:id="@+id/fdgfghgh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="-3.44%"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="16sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/qweqwe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15sp"
+                    android:layout_weight="1"
+                    android:text="More information"
+                    android:textColor="?attr/colorAccent"
+                    android:textSize="12sp"
+                    tools:layout_editor_absoluteX="145dp"
+                    tools:layout_editor_absoluteY="125dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/vievCoin_txt_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="Last Updated: Mar 06, 2018 3:50 PM UTC"
+                android:textColor="@color/place_autocomplete_search_hint"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="145dp"
+                tools:layout_editor_absoluteY="125dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Favorite" />
+
+</LinearLayout>
