@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "1043157831411",
-    "firebase_url": "https://mychat-9deba.firebaseio.com",
-    "project_id": "mychat-9deba",
-    "storage_bucket": "mychat-9deba.appspot.com"
+    "project_number": "195773773143",
+    "firebase_url": "https://altexio-dc526.firebaseio.com",
+    "project_id": "altexio-dc526",
+    "storage_bucket": "altexio-dc526.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1043157831411:android:ba9e5cde1ea4337d",
+        "mobilesdk_app_id": "1:195773773143:android:ba9e5cde1ea4337d",
         "android_client_info": {
           "package_name": "com.app.altex.altexio"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1043157831411-j4a2ds0hhjbuo8ig0opk3brgsg5b2d8n.apps.googleusercontent.com",
+          "client_id": "195773773143-svdmh8d0rl7v2njo13ah77r0qi46gqi6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.app.altex.altexio",
@@ -23,13 +23,21 @@
           }
         },
         {
-          "client_id": "1043157831411-dj68mdtpbsfq1hkkqd5rsjkga72k03d3.apps.googleusercontent.com",
+          "client_id": "195773773143-im3a6ri0632nojcenilt6jmr8mp58hih.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.altex.altexio",
+            "certificate_hash": "d5a3f4a40637dd7cb0e0ea2bcf9761faf7317346"
+          }
+        },
+        {
+          "client_id": "195773773143-m2jugv2fd5j7vbh8b0qkja71c3j2ktcf.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDkAmdPgyBRXWgeYxcMWUm-bZ4QweJLVOQ"
+          "current_key": "AIzaSyA4J3rLh5ifNh4j9Lv5sYLO5pDchZTunxg"
         }
       ],
       "services": {
@@ -40,15 +48,8 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1043157831411-dj68mdtpbsfq1hkkqd5rsjkga72k03d3.apps.googleusercontent.com",
+              "client_id": "195773773143-m2jugv2fd5j7vbh8b0qkja71c3j2ktcf.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "1043157831411-gg2g5h3anmpb0r2ao82vs99p0kr42rg5.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "MadeInHeaven.Alttex-messager"
-              }
             }
           ]
         },

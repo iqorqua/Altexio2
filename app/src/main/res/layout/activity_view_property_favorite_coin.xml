@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.app.altex.altexio.thirdpatryactivity.ViewPropertyFavoriteCoin">
+    tools:context="com.app.altex.alttexio.thirdpatryactivity.ViewPropertyFavoriteCoin">
 
     <TextView
         android:id="@+id/vievCoin_txt_view"

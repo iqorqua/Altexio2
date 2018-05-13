@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bckg"
-    tools:context="com.app.altex.altexio.fragments.StartPayment">
+    tools:context="com.app.altex.alttexio.fragments.StartPayment">
 
     <!-- TODO: Update blank fragment layout -->
 

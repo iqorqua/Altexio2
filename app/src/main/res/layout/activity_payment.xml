@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bckg"
-    tools:context="com.app.altex.altexio.thirdpatryactivity.Payment">
+    tools:context="com.app.altex.alttexio.thirdpatryactivity.Payment">
 
     <goldzweigapps.tabs.View.EasyTabs
         android:id="@+id/EasyTabs"

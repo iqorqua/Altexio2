@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#424242"
-    tools:context="com.app.altex.altexio.firebaseandroid.view.FullScreenImageActivity">
+    tools:context="com.app.altex.alttexio.firebaseandroid.view.FullScreenImageActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

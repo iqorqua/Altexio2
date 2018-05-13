@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.app.altex.altexio.customelements.SquareFrameLayout
+    <com.app.altex.alttexio.customelements.SquareFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -15,15 +15,49 @@
             android:scaleType="centerCrop"
             android:src="@drawable/pic" />
 
-    </com.app.altex.altexio.customelements.SquareFrameLayout>
+    </com.app.altex.alttexio.customelements.SquareFrameLayout>
 
-    <TextView
-        android:id="@+id/textview_name"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="@color/place_autocomplete_search_text"
-        android:maxLines="1"
-        android:padding="16dp"
-        android:textColor="@color/place_autocomplete_search_hint" />
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textColor="@color/place_autocomplete_search_hint" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textview_price_btc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/bitcoin_icon"
+                android:gravity="center_vertical"
+                android:text="1 BTC"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textview_price_usd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="54254$"
+                android:textColor="@android:color/darker_gray" />
+
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

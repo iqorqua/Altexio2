@@ -6,82 +6,251 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bckg"
-    tools:context="com.app.altex.altexio.thirdpatryactivity.ShopView">
+    tools:context="com.app.altex.alttexio.thirdpatryactivity.ShopView">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/shop_image_preview"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="600px"
-                android:src="@drawable/common_google_signin_btn_icon_light_normal_background" />
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/shop_txt_goodname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20px"
-                android:text="TextView"
-                android:textColor="@color/place_autocomplete_search_hint"
-                android:textSize="20sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/shop_view_exit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_action_leftw"
+                        android:backgroundTint="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/shop_txt_goodname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="20px"
+                        android:text="TextView"
+                        android:textColor="@color/place_autocomplete_search_hint"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/shop_image_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="600px"
+                    android:src="@drawable/common_google_signin_btn_icon_light_normal_background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price:"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/shop_txt_goodprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/bitcoin_icon"
+                        android:padding="20px"
+                        android:text="TextView"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <com.rilixtech.materialfancybutton.MaterialFancyButton
+                        android:id="@+id/shop_view_btn_buy_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        app:mfb_borderColor="@color/bootstrap_gray_dark"
+                        app:mfb_defaultColor="?attr/colorPrimary"
+                        app:mfb_text="buy item"
+                        fancy:mfb_borderWidth="1dp"
+                        fancy:mfb_focusColor="@android:color/holo_blue_light"
+                        fancy:mfb_iconFont="fontawesome.ttf"
+                        fancy:mfb_iconPosition="left"
+                        fancy:mfb_radius="30dp"
+                        fancy:mfb_textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/shop_txt_moneyleft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You have 1.25664 BTC"
+                    android:textColor="@color/place_autocomplete_search_hint" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20px"
+                    android:editable="false"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:focusedByDefault="false"
+                    android:inputType="textMultiLine"
+                    android:text="Unlike traditional, circular earbuds, the design of the new apple ear pods is defined by the geometry of the ear. Which makes them more comfortable for more people than any other earbud-style headphone. The speakers inside apple ear pods have been engineered to minimize sound loss and maximize sound output. So you get high-quality audio that's just as impressive as what you'd hear from more expensive headphones. The apple ear pods with remote and mic also include a built-in remote that lets you adjust the volume, control the playback of music and video, and answer or end calls with a pinch of the cord. Compatibility information the remote and mic are supported by all models of iPod, iPhone, and iPad (not all models support volume up/down functions). Audio is supported by all iPod models. Requires software version 1.0.3 For iPod Nano (4th generation), 2.0.1 For iPod classic (120gb), and 2.2 Or later for iPod touch (2nd generation)."
+                    android:textColor="@color/place_autocomplete_search_hint" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/shop_txt_goodprice"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Rating"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:progressTint="@color/bootstrap_brand_warning"
+                            android:rating="4.3"
+                            android:secondaryProgressTint="@color/bootstrap_brand_secondary_text"
+                            android:stepSize="0.1" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4.3"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="24sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="20px"
-                    android:text="TextView"
-                    android:textColor="@color/place_autocomplete_search_hint"
-                    android:textSize="24sp" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Seller"
+                        android:textColor="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Jimmy Neutron"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="24sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/shopview_comment_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_corners"
+                    android:backgroundTint="@android:color/black"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:inputType="textMultiLine|textImeMultiLine"
+                    android:minHeight="100dp"
+                    android:padding="10dp" />
 
                 <com.rilixtech.materialfancybutton.MaterialFancyButton
-                    android:id="@+id/btn"
+                    android:id="@+id/sell_btn_sell"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    fancy:mfb_borderColor="#FFFFFF"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    app:mfb_borderColor="@color/bootstrap_brand_primary"
+                    app:mfb_defaultColor="@android:color/transparent"
+                    app:mfb_text="Comment"
+                    app:mfb_textColor="@color/bootstrap_brand_primary"
                     fancy:mfb_borderWidth="1dp"
-                    fancy:mfb_defaultColor="@android:color/holo_blue_dark"
                     fancy:mfb_focusColor="@android:color/holo_blue_light"
                     fancy:mfb_iconFont="fontawesome.ttf"
                     fancy:mfb_iconPosition="left"
-                    fancy:mfb_radius="30dp"
-                    fancy:mfb_text="Set pickup location"
-                    fancy:mfb_textColor="#FFFFFF" />
-
+                    fancy:mfb_radius="30dp" />
             </LinearLayout>
 
-            <EditText
-                android:id="@+id/editText"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20px"
-                android:editable="false"
-                android:ems="10"
-                android:enabled="false"
-                android:focusedByDefault="false"
-                android:inputType="textMultiLine"
-                android:text="Unlike traditional, circular earbuds, the design of the new apple ear pods is defined by the geometry of the ear. Which makes them more comfortable for more people than any other earbud-style headphone. The speakers inside apple ear pods have been engineered to minimize sound loss and maximize sound output. So you get high-quality audio that's just as impressive as what you'd hear from more expensive headphones. The apple ear pods with remote and mic also include a built-in remote that lets you adjust the volume, control the playback of music and video, and answer or end calls with a pinch of the cord. Compatibility information the remote and mic are supported by all models of iPod, iPhone, and iPad (not all models support volume up/down functions). Audio is supported by all iPod models. Requires software version 1.0.3 For iPod Nano (4th generation), 2.0.1 For iPod classic (120gb), and 2.2 Or later for iPod touch (2nd generation)."
-                android:textColor="@color/place_autocomplete_search_hint" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comments"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="24sp" />
+
+                <include
+                    layout="@layout/item_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right" />
+            </LinearLayout>
+
+        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

@@ -1,29 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.app.altex.altexio">
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    package="com.app.altex.alttexio">
 
     <intent-filter>
         <action android:name="android.intent.action.MAIN" />
 
         <category android:name="android.intent.category.LAUNCHER" />
     </intent-filter>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
+    <!-- Used for Importing / Exporting Wallets -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Used for QR Code scanning -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Used for optional Applock Feature -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/alltexppicon"
         android:label="@string/app_name"
         android:roundIcon="@drawable/alltexppicon"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,9 +44,26 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/api_key_google_places" />
 
-        <activity android:name=".firebaseandroid.view.LoginActivity" />
+        <activity
+            android:name=".firebaseandroid.view.LoginActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".etherum_wallet.activities.AddressDetailActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".etherum_wallet.activities.SendActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".firebaseandroid.util.UserList"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".firebaseandroid.view.FullScreenImageActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppThemeFullScreenImage" />
 
         <provider
@@ -50,11 +76,13 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <service android:name=".MyFirebaseMessagingService">
+        <!--
+        service android:name=".MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
+        </service
+        -->
         <!--
          Set custom default icon. This is used when no icon is set for incoming notification messages.
          See README(https://goo.gl/l4GJaQ) for more.
@@ -70,10 +98,33 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <activity android:name=".thirdpatryactivity.FavotiteCoins" />
-        <activity android:name=".thirdpatryactivity.ViewPropertyFavoriteCoin" />
-        <activity android:name=".thirdpatryactivity.ShopView" />
-        <activity android:name=".thirdpatryactivity.Payment"></activity>
+        <activity
+            android:name=".thirdpatryactivity.FavotiteCoins"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thirdpatryactivity.ViewPropertyFavoriteCoin"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thirdpatryactivity.ShopView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".etherum_wallet.activities.QRScanActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity android:name=".thirdpatryactivity.SellItem"></activity>
+        <service
+            android:name=".etherum_wallet.services.NotificationService"
+            android:exported="false" />
+
+        <service
+            android:name=".etherum_wallet.services.WalletGenService"
+            android:exported="false" />
+        <service
+            android:name=".etherum_wallet.services.TransactionService"
+            android:exported="false" />
     </application>
 
 </manifest>
