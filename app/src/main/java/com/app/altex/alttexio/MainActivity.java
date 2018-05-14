@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             findViewById(R.id.mainLO).setBackground(getDrawable(R.drawable.bckg));
             Fragment fragment = null;
+
             switch (item.getItemId()) {
                 case R.id.navigation_conversation: {
                     fragment = new UsersDialog();
