@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:focusable="auto"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".thirdpatryactivity.SellItem">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/add_photo" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/sell_itemName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/rounded_corners"
+            android:hint="Name Item" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/sell_itemPrice"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_corners"
+                android:hint="Price"
+                android:inputType="number|numberSigned|numberDecimal" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <fr.ganfra.materialspinner.MaterialSpinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners"
+            app:ms_alignLabels="false"
+            app:ms_arrowColor="@android:color/darker_gray"
+            app:ms_baseColor="@android:color/darker_gray"
+            app:ms_floatingLabelColor="@android:color/darker_gray"
+            app:ms_highlightColor="@android:color/darker_gray"
+            app:ms_hint="Coin"
+            app:ms_hintColor="@android:color/holo_blue_dark" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="acbba7dab8e79ab7a97ed9abebd7aeb9aedb7ab"
+        android:textColor="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:gravity="top|left"
+        android:inputType="textMultiLine|textImeMultiLine"
+        android:padding="10dp" />
+
+    <com.rilixtech.materialfancybutton.MaterialFancyButton
+        android:id="@+id/sell_btn_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        app:mfb_borderColor="@android:color/holo_blue_dark"
+        app:mfb_text="Upload product"
+        fancy:mfb_borderWidth="1dp"
+        fancy:mfb_defaultColor="@android:color/holo_blue_light"
+        fancy:mfb_focusColor="@android:color/holo_blue_light"
+        fancy:mfb_iconFont="fontawesome.ttf"
+        fancy:mfb_iconPosition="left"
+        fancy:mfb_radius="30dp"
+        fancy:mfb_textColor="#FFFFFF" />
+
+</LinearLayout>
