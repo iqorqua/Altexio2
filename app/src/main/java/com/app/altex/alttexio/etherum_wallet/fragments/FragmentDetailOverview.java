@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
@@ -215,6 +214,7 @@ public class FragmentDetailOverview extends Fragment implements View.OnClickList
         EtherscanAPI.getInstance().getBalance(ethaddress, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
+                if (ac == null) return;
                 ac.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -232,6 +232,7 @@ public class FragmentDetailOverview extends Fragment implements View.OnClickList
                     token.add(0, new TokenDisplay("Ether", "ETH", ethbal.multiply(new BigDecimal(1000d)), 3, 1, "", "", 0, 0));
                     balanceDouble = balanceDouble.add(ethbal);
                 } catch (JSONException e) {
+                    if (ac == null) return;
                     ac.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -241,6 +242,7 @@ public class FragmentDetailOverview extends Fragment implements View.OnClickList
                     e.printStackTrace();
                 }
                 final CurrencyEntry cur = ExchangeCalculator.getInstance().getCurrent();
+                if (ac == null) return;
                 ac.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -256,6 +258,7 @@ public class FragmentDetailOverview extends Fragment implements View.OnClickList
         EtherscanAPI.getInstance().getTokenBalances(ethaddress, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
+                if (ac == null) return;
                 ac.runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -276,6 +279,7 @@ public class FragmentDetailOverview extends Fragment implements View.OnClickList
                     balanceDouble = balanceDouble.add(new BigDecimal(ExchangeCalculator.getInstance().sumUpTokenEther(token)));
 
                     final CurrencyEntry cur = ExchangeCalculator.getInstance().getCurrent();
+                    if (ac == null) return;
                     ac.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -286,6 +290,7 @@ public class FragmentDetailOverview extends Fragment implements View.OnClickList
                         }
                     });
                 } catch (Exception e) {
+                    if (ac == null) return;
                     ac.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {

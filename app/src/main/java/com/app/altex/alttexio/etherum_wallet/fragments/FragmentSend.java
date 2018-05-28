@@ -263,6 +263,7 @@ public class FragmentSend extends Fragment {
             EtherscanAPI.getInstance().getBalance(spinner.getSelectedItem().toString(), new Callback() {
                 @Override
                 public void onFailure(Call call, IOException e) {
+                    if (ac == null) return;
                     ac.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -274,6 +275,7 @@ public class FragmentSend extends Fragment {
 
                 @Override
                 public void onResponse(Call call, final Response response) throws IOException {
+                    if (ac == null) return;
                     ac.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -380,6 +382,7 @@ public class FragmentSend extends Fragment {
                 public void onResponse(Call call, Response response) throws IOException {
                     try {
                         gaslimit = ResponseParser.parseGasPrice(response.body().string());
+                        if (ac == null) return;
                         ac.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            findViewById(R.id.mainLO).setBackground(getDrawable(R.drawable.bckg));
+            findViewById(R.id.mainLO).setBackground(getResources().getDrawable(R.drawable.bckg));
             Fragment fragment = null;
 
             switch (item.getItemId()) {
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            if(fragment!=null){
+            if (fragment != null) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment, fragment).commit();
                 return true;
             }
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         Mayi.withActivity(MainActivity.this)
-                .withPermissions(Manifest.permission.INTERNET, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_NETWORK_STATE,Manifest.permission.ACCESS_WIFI_STATE)
+                .withPermissions(Manifest.permission.INTERNET, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.ACCESS_NETWORK_STATE, Manifest.permission.ACCESS_WIFI_STATE)
                 .check();
 
         //startActivity(new Intent(getApplicationContext(), UserList.class));

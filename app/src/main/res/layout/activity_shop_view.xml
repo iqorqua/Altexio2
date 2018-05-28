@@ -211,7 +211,8 @@
                     android:gravity="top|left"
                     android:inputType="textMultiLine|textImeMultiLine"
                     android:minHeight="100dp"
-                    android:padding="10dp" />
+                    android:padding="10dp"
+                    android:textColor="@color/md_white_1000" />
 
                 <com.rilixtech.materialfancybutton.MaterialFancyButton
                     android:id="@+id/sell_btn_sell"

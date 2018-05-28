@@ -44,6 +44,7 @@ public class FragmentTransactions extends FragmentTransactionsAbstract {
                 @Override
                 public void onFailure(Call call, IOException e) {
                     if (isAdded()) {
+                        if (ac == null) return;
                         ac.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -61,6 +62,7 @@ public class FragmentTransactions extends FragmentTransactionsAbstract {
                         RequestCache.getInstance().put(RequestCache.TYPE_TXS_NORMAL, address, restring);
                     final List<TransactionDisplay> w = new ArrayList<TransactionDisplay>(ResponseParser.parseTransactions(restring, "Unnamed Address", address, TransactionDisplay.NORMAL));
                     if (isAdded()) {
+                        if (ac == null) return;
                         ac.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -74,6 +76,7 @@ public class FragmentTransactions extends FragmentTransactionsAbstract {
                 @Override
                 public void onFailure(Call call, IOException e) {
                     if (isAdded()) {
+                        if (ac == null) return;
                         ac.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -91,6 +94,7 @@ public class FragmentTransactions extends FragmentTransactionsAbstract {
                         RequestCache.getInstance().put(RequestCache.TYPE_TXS_INTERNAL, address, restring);
                     final List<TransactionDisplay> w = new ArrayList<TransactionDisplay>(ResponseParser.parseTransactions(restring, "Unnamed Address", address, TransactionDisplay.CONTRACT));
                     if (isAdded()) {
+                        if (ac == null) return;
                         ac.runOnUiThread(new Runnable() {
                             @Override
                             public void run() {

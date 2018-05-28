@@ -16,10 +16,8 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.DividerItemDecoration;
@@ -41,7 +39,6 @@ import android.widget.Toast;
 import com.app.altex.alttexio.MainActivity;
 import com.app.altex.alttexio.R;
 import com.app.altex.alttexio.etherum_wallet.activities.AddressDetailActivity;
-import com.app.altex.alttexio.etherum_wallet.activities.QRScanActivity;
 import com.app.altex.alttexio.etherum_wallet.data.CurrencyEntry;
 import com.app.altex.alttexio.etherum_wallet.data.WalletDisplay;
 import com.app.altex.alttexio.etherum_wallet.interfaces.PasswordDialogCallback;
@@ -52,7 +49,6 @@ import com.app.altex.alttexio.etherum_wallet.utils.AddressNameConverter;
 import com.app.altex.alttexio.etherum_wallet.utils.Dialogs;
 import com.app.altex.alttexio.etherum_wallet.utils.ExchangeCalculator;
 import com.app.altex.alttexio.etherum_wallet.utils.ResponseParser;
-import com.app.altex.alttexio.etherum_wallet.utils.Settings;
 import com.app.altex.alttexio.etherum_wallet.utils.WalletAdapter;
 import com.app.altex.alttexio.etherum_wallet.utils.WalletStorage;
 import com.github.clans.fab.FloatingActionButton;
@@ -63,7 +59,6 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.regex.Pattern;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -282,7 +277,7 @@ public abstract class FragmentWalletsAbstract extends Fragment implements View.O
                     final List<WalletDisplay> w = new ArrayList<WalletDisplay>();
                     for (StorableWallet cur : storedwallets)
                         w.add(new WalletDisplay(AddressNameConverter.getInstance(ac).get(cur.getPubKey()), cur.getPubKey(), new BigInteger("-1"), WalletDisplay.CONTACT));
-
+                    if (ac == null) return;
                     ac.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -302,7 +297,7 @@ public abstract class FragmentWalletsAbstract extends Fragment implements View.O
                         e.printStackTrace();
                         return;
                     }
-
+                    if (ac == null) return;
                     ac.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -354,7 +349,7 @@ public abstract class FragmentWalletsAbstract extends Fragment implements View.O
                 Toast.makeText(ac, R.string.wallet_menu_action_copied_to_clipboard, Toast.LENGTH_SHORT).show();
                 break;
             case 202:
-                Intent i = new Intent(android.content.Intent.ACTION_SEND);
+                Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("text/plain");
                 i.putExtra(Intent.EXTRA_TEXT, wallets.get(position).getPublicKey());
                 startActivity(Intent.createChooser(i, "Share via"));
