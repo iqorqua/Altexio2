@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="AltContacts"
+            android:text="Contacts"
             android:textColor="@color/bootstrap_brand_secondary_border"
             android:textSize="24sp" />
 
