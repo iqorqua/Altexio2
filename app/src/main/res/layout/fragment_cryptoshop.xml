@@ -24,6 +24,11 @@
             android:textColor="@android:color/holo_blue_dark"
             android:textColorHint="@android:color/holo_blue_dark" />
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/grid_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
         <GridView
             android:id="@+id/grid"
             android:layout_width="match_parent"

@@ -5,17 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListAdapter;
 
 import com.app.altex.alttexio.R;
-import com.app.altex.alttexio.customelements.GridAdapter;
+import com.app.altex.alttexio.customelements.CryptoshopRecyclerGrid;
 import com.app.altex.alttexio.customelements.ImageGridItem;
 import com.app.altex.alttexio.thirdpatryactivity.SellItem;
 import com.app.altex.alttexio.thirdpatryactivity.ShopView;
@@ -30,6 +30,7 @@ public class Cryptoshop extends Fragment {
 
     public static ArrayList<ImageGridItem> currentItemsSet = new ArrayList<>();
     GridView gv;
+    RecyclerView rv;
 
     public Cryptoshop() {
         // Required empty public constructor
@@ -37,14 +38,14 @@ public class Cryptoshop extends Fragment {
     }
 
     private ImageGridItem[] ITEMS = new ImageGridItem[]{
-            new ImageGridItem("iPhone x", "ETH 0.25", R.drawable.apple_iphone_x_256gb_space_gray_images_2433232441),
-            new ImageGridItem("Asus", "ETH 0.45", R.drawable.asus),
-            new ImageGridItem("Dell", "ETH 0.55", R.drawable.dell),
-            new ImageGridItem("Phone", "ETH 0.22", R.drawable.pic),
-            new ImageGridItem("Gaming", "ETH 0.65", R.drawable.pic1),
-            new ImageGridItem("S9", "ETH 0.35", R.drawable.s9),
-            new ImageGridItem("Asus", "ETH 0.55", R.drawable.sus),
-            new ImageGridItem("Razer", "ETH 0.28", R.drawable.razer),
+            new ImageGridItem("iPhone x", "0.25", "345", R.drawable.apple_iphone_x_256gb_space_gray_images_2433232441),
+            new ImageGridItem("Asus", "0.45","567", R.drawable.asus),
+            new ImageGridItem("Dell", "0.55","6784", R.drawable.dell),
+            new ImageGridItem("Phone", "0.22","3421", R.drawable.pic),
+            new ImageGridItem("Gaming", "0.65","1254", R.drawable.pic1),
+            new ImageGridItem("S9", "0.35","442", R.drawable.s9),
+            new ImageGridItem("Asus", "0.55","562", R.drawable.sus),
+            new ImageGridItem("Razer", "0.28","2463", R.drawable.razer),
     };
 
     @Override
@@ -59,17 +60,9 @@ public class Cryptoshop extends Fragment {
                 startActivity(intent);
             }
         });
-        gv = (GridView) result.findViewById(R.id.grid);
-        gv.setAdapter(new GridAdapter(this.getContext(), currentItemsSet));
-        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-               Intent intent = new Intent(getContext(), ShopView.class);
-                intent.putExtra("pos", i);
-                startActivity(intent);
-
-            }
-        });
+        rv = (RecyclerView)result.findViewById(R.id.grid_recycler);
+        rv.setLayoutManager(new GridLayoutManager( getContext(), 2));
+        UpdateDataSet();
 
         ((TextInputEditText)result.findViewById(R.id.cryptoshop_search)).addTextChangedListener(new TextWatcher() {
             @Override
@@ -91,11 +84,23 @@ public class Cryptoshop extends Fragment {
                     }
                 }
 
-                ListAdapter adapter = new GridAdapter(getContext(), currentItemsSet);
-                gv.setAdapter(adapter);
+                UpdateDataSet();
             }
         });
         return result;
+    }
+
+    private void UpdateDataSet() {
+        CryptoshopRecyclerGrid adapter = new CryptoshopRecyclerGrid(getContext(), currentItemsSet.toArray(new ImageGridItem[0]));
+        adapter.setClickListener(new CryptoshopRecyclerGrid.ItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(getContext(), ShopView.class);
+                intent.putExtra("pos", position);
+                startActivity(intent);
+            }
+        });
+        rv.setAdapter(adapter);
     }
 
 }

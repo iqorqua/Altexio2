@@ -17,12 +17,14 @@ public class ImageGridItem {
 
 
     private final String mName;
-    private final String mAuthor;
+    private final String mPrice_btc;
+    private final String mPrice_usd;
     public final int image;
 
-    public ImageGridItem(String name, String author, int fileName) {
+    public ImageGridItem(String name, String price_btc, String price_usd, int fileName) {
         mName = name;
-        mAuthor = author;
+        mPrice_btc = price_btc;
+        mPrice_usd = price_usd;
         image = fileName;
     }
 
@@ -30,8 +32,12 @@ public class ImageGridItem {
         return mName.hashCode() + image;
     }
 
-    public String getAuthor() {
-        return mAuthor;
+    public String getPriceBtc() {
+        return mPrice_btc;
+    }
+
+    public String getPriceUsd() {
+        return mPrice_usd;
     }
 
     public String getName() {
